@@ -1,0 +1,146 @@
+/* FLOWMIND AI — LIGHT CLIMATE / GEO-INTELLIGENCE UI */
+:root{
+  --fm-bg:#f4f8f7;
+  --fm-panel:#ffffff;
+  --fm-panel-soft:#f7fbfa;
+  --fm-text:#18332f;
+  --fm-muted:#71847f;
+  --fm-line:#dbe8e5;
+  --fm-water:#1683a6;
+  --fm-teal:#2b9f8e;
+  --fm-amber:#d98b24;
+  --fm-danger:#d9534f;
+  --fm-navy:#173b50;
+  --fm-radius:14px;
+}
+
+.flowmind-chic{min-height:100vh;overflow-x:hidden;background:var(--fm-bg)!important;color:var(--fm-text);letter-spacing:-.012em;}
+.flowmind-chic::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.42;background-image:linear-gradient(rgba(45,104,99,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(45,104,99,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+.flowmind-chic::after{content:"";position:fixed;right:-300px;top:80px;width:700px;height:700px;border:1px solid rgba(22,131,166,.09);border-radius:50%;box-shadow:0 0 0 55px rgba(22,131,166,.025),0 0 0 110px rgba(22,131,166,.018);pointer-events:none;z-index:-1}
+.flowmind-chic h1,.flowmind-chic h2,.flowmind-chic h3,.flowmind-chic h4{letter-spacing:-.035em}
+.flowmind-chic h1{font-weight:800!important}.flowmind-chic h2{font-weight:750!important}.flowmind-chic h3{font-weight:700!important}
+
+.flowmind-chic header{background:rgba(255,255,255,.94)!important;border-color:var(--fm-line)!important;backdrop-filter:blur(18px);box-shadow:0 1px 0 rgba(25,70,65,.04),0 12px 32px rgba(29,72,67,.06)}
+.flowmind-chic header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,#1683a6,#2b9f8e,transparent);opacity:.3}
+.flowmind-chic .border{border-color:var(--fm-line)!important}.flowmind-chic .rounded-2xl,.flowmind-chic .rounded-xl{border-radius:var(--fm-radius)!important}
+.flowmind-chic [class*="bg-[#07100f"],.flowmind-chic [class*="bg-[#091513"],.flowmind-chic [class*="bg-[#0b1916"],.flowmind-chic [class*="bg-[#091412"]{background:#fff!important}
+.flowmind-chic [class*="bg-white/"]{background:#f7fbfa!important}.flowmind-chic [class*="bg-black/"]{background:rgba(20,54,50,.04)!important}
+.flowmind-chic [class*="text-slate-"]{color:#71847f!important}.flowmind-chic [class*="text-emerald-"]{color:#20886f!important}.flowmind-chic [class*="text-cyan-"]{color:#1683a6!important}.flowmind-chic [class*="text-teal-"]{color:#258f82!important}
+.flowmind-chic input,.flowmind-chic select{color:#24443f!important;background:#fff!important;border:1px solid #d5e3e0!important;border-radius:8px!important}
+.flowmind-chic input:hover,.flowmind-chic select:hover{border-color:#abcac3!important}.flowmind-chic input:focus,.flowmind-chic select:focus{outline:none!important;border-color:#1683a6!important;box-shadow:0 0 0 3px rgba(22,131,166,.08)!important}
+.flowmind-chic input::placeholder{color:#94a6a1!important}.flowmind-chic option{background:#fff;color:#18332f}
+.flowmind-chic button{border-radius:9px;transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease}.flowmind-chic button:hover{transform:translateY(-1px)}.flowmind-chic button:active{transform:translateY(0) scale(.985)}
+.flowmind-chic nav button::before{background:#1683a6!important}.flowmind-chic ::selection{background:rgba(22,131,166,.15);color:#173b50}
+.flowmind-chic ::-webkit-scrollbar{width:6px;height:6px}.flowmind-chic ::-webkit-scrollbar-thumb{background:#c8d9d5;border-radius:999px}
+
+/* risk gauge */
+.flowmind-chic .flowmind-risk-wrap{margin-top:18px}.flowmind-chic .flowmind-risk-ring{width:132px;height:132px;border-radius:50%;position:relative;margin:0 auto;transform:rotate(-45deg);filter:drop-shadow(0 7px 14px rgba(22,131,166,.12))}
+.flowmind-chic .flowmind-risk-ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px #dbe8e5}.flowmind-chic .flowmind-risk-ring-inner{position:absolute;inset:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;transform:rotate(45deg);background:#f8fbfa}.flowmind-chic .flowmind-risk-number{font-size:31px;line-height:1;font-weight:800;color:#173b50}.flowmind-chic .flowmind-risk-denom{margin-top:4px;font-size:9px;color:#82938e}.flowmind-chic .flowmind-risk-scale{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:10px;font-size:7px;letter-spacing:.08em;color:#7a8c87;text-align:center}.flowmind-chic .flowmind-risk-scale span:nth-child(2){color:#b48738}.flowmind-chic .flowmind-risk-scale span:nth-child(3){color:#d4773f}.flowmind-chic .flowmind-risk-scale span:nth-child(4){color:#d9534f}
+.flowmind-chic .flowmind-zone-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 10px;border:1px solid #e0ebe8;border-radius:8px;background:#f8fbfa;transition:.18s}.flowmind-chic .flowmind-zone-row:hover{background:#f0f8f7;border-color:#bcdad4;transform:translateX(2px)}
+
+/* propagation timeline */
+.flowmind-chic .flowmind-timeline{position:relative;overflow:hidden;background:#fff!important;box-shadow:0 8px 22px rgba(34,80,74,.045)}.flowmind-chic .flowmind-timeline-track{position:relative;height:5px;border-radius:999px;background:#e5efed}.flowmind-chic .flowmind-timeline-fill{position:absolute;inset:0 auto 0 0;height:100%;border-radius:999px;background:linear-gradient(90deg,#61cfc1,#1683a6);transition:width .25s}.flowmind-chic .flowmind-timeline-marker{position:absolute;top:50%;width:13px;height:13px;border:3px solid #fff;border-radius:50%;background:#1683a6;box-shadow:0 0 0 3px rgba(22,131,166,.15);transform:translate(-50%,-50%);transition:left .25s}.flowmind-chic .flowmind-phase{display:flex;align-items:center;gap:5px;color:#91a19d;font-size:8px;font-weight:700;letter-spacing:.12em}.flowmind-chic .flowmind-phase-dot{width:6px;height:6px;border-radius:50%;background:#dbe7e4}.flowmind-chic .flowmind-phase.is-active{color:#277c72}.flowmind-chic .flowmind-phase.is-active .flowmind-phase-dot{background:#1683a6;box-shadow:0 0 0 3px rgba(22,131,166,.08)}
+
+/* map */
+.flowmind-map-card{box-shadow:0 10px 28px rgba(32,78,72,.055)}
+.flowmind-map-viewport{position:relative;overflow:hidden;border:1px solid #cfe1dd;border-radius:14px;background:#eaf4f1;box-shadow:inset 0 1px 0 #fff}
+.flowmind-map-svg{display:block;width:100%;height:auto;min-height:330px}.flowmind-map-overlay{position:absolute;top:12px;right:12px;display:flex;gap:8px;pointer-events:none}.flowmind-map-overlay span{display:flex;align-items:center;gap:5px;padding:6px 9px;border:1px solid rgba(199,218,214,.9);border-radius:999px;background:rgba(255,255,255,.9);font-size:9px;font-weight:700;color:#53716a;box-shadow:0 4px 12px rgba(40,80,75,.06)}.flowmind-live-dot{width:6px;height:6px;border-radius:50%;background:#2b9f8e;box-shadow:0 0 0 3px rgba(43,159,142,.12)}
+
+/* charts */
+.flowmind-analytics{padding-bottom:24px}.flowmind-chart-card{min-width:0;min-height:270px;padding:16px;border:1px solid #dbe8e5;border-radius:13px;background:#fff;box-shadow:0 8px 22px rgba(34,80,74,.045);overflow:hidden}.flowmind-chart-header{min-height:66px}.flowmind-chart-body{height:170px;min-height:170px;width:100%;position:relative}.flowmind-chart-body>.recharts-responsive-container{width:100%!important;height:100%!important}.flowmind-chic .recharts-cartesian-grid line{stroke:#e2ecea!important}.flowmind-chic .recharts-text{fill:#71847f!important;font-size:10px}.flowmind-chic .recharts-tooltip-wrapper{outline:none!important}.flowmind-chic .recharts-default-tooltip{border:1px solid #dbe8e5!important;border-radius:9px!important;background:#fff!important;box-shadow:0 8px 20px rgba(30,70,65,.1)!important}.flowmind-empty-chart{height:100%;display:grid;place-items:center;text-align:center;padding:20px;color:#8a9b96;font-size:11px;background:#f7fbfa;border:1px dashed #d4e3df;border-radius:9px}
+
+/* generic cards / metrics */
+.flowmind-chic .shadow,.flowmind-chic .shadow-sm,.flowmind-chic .shadow-lg,.flowmind-chic .shadow-xl{box-shadow:0 8px 24px rgba(34,80,74,.055)!important}.flowmind-chic .text-2xl,.flowmind-chic .text-3xl,.flowmind-chic .text-4xl{text-shadow:none}
+
+@media(max-width:1100px){.flowmind-chic main{grid-template-columns:220px 1fr!important}.flowmind-chic main>aside:last-child{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--fm-line)}}
+@media(max-width:760px){.flowmind-chic main{display:block!important}.flowmind-chic main>aside,.flowmind-chic main>section{border:0!important}.flowmind-map-svg{min-height:250px}.flowmind-map-overlay{left:10px;right:10px;justify-content:space-between}.flowmind-chic .flowmind-timeline .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.flowmind-chic .flowmind-timeline>div:last-child span:nth-child(2){display:none}}
+
+/* enhanced geospatial map */
+.flowmind-map-asset { transition: transform .2s ease, opacity .2s ease; }
+.flowmind-map-asset:hover { transform: translateY(-2px); }
+.flowmind-map-card .flowmind-map-toolbar { min-height: 38px; }
+.flowmind-map-viewport { box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 10px 26px rgba(42,93,86,.06); }
+
+/* interactive map layers */
+.flowmind-map-toolbar button { white-space: nowrap; }
+.flowmind-map-asset { cursor: pointer; transform-box: fill-box; transform-origin: center; }
+.flowmind-map-asset:hover { filter: drop-shadow(0 3px 5px rgba(22,131,166,.18)); }
+.flowmind-map-detail{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 14px;border:1px solid #cfe1dd;border-radius:12px;background:linear-gradient(90deg,#f8fcfb,#fff);box-shadow:0 6px 18px rgba(32,78,72,.045)}
+.flowmind-map-detail-kicker{font-size:8px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:#81938e}
+.flowmind-map-detail h3{font-size:13px;font-weight:800;color:#173b50;margin:0}
+.flowmind-map-detail>div:first-child>div span:last-child{font-size:9px;color:#71847f;border-left:1px solid #dbe8e5;padding-left:8px}
+.flowmind-map-detail-dot{width:7px;height:7px;border-radius:50%;background:#1683a6;box-shadow:0 0 0 4px rgba(22,131,166,.09)}
+.flowmind-map-detail-stats{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.flowmind-map-detail-stats div{display:flex;flex-direction:column;gap:2px}
+.flowmind-map-detail-stats span{font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:#8a9b96}
+.flowmind-map-detail-stats strong{font-size:11px;color:#24443f;white-space:nowrap}
+.flowmind-map-detail-close{padding:6px 9px!important;border:1px solid #dbe8e5!important;background:#fff!important;color:#71847f!important;font-size:9px!important}
+@media(max-width:800px){.flowmind-map-detail{align-items:flex-start;flex-direction:column}.flowmind-map-detail-stats{width:100%;justify-content:space-between;gap:10px}}
+
+/* map navigation + scientific legends */
+.flowmind-map-controls{position:absolute;left:12px;top:12px;z-index:4;display:flex;align-items:center;gap:4px;padding:4px;border:1px solid #d3e2df;border-radius:10px;background:rgba(255,255,255,.94);box-shadow:0 5px 14px rgba(34,80,74,.08);backdrop-filter:blur(8px)}
+.flowmind-map-controls button{width:28px;height:28px!important;padding:0!important;display:grid;place-items:center;border:1px solid #dbe8e5!important;background:#fff!important;color:#315b57!important;font-size:17px!important;line-height:1}
+.flowmind-map-controls button:hover{background:#f2f9f7!important;border-color:#b8d5d0!important}
+.flowmind-map-controls span{min-width:42px;text-align:center;font-size:9px;font-weight:800;color:#68817a;letter-spacing:.04em}
+.flowmind-map-legend{position:absolute;left:12px;bottom:12px;z-index:4;min-width:148px;padding:9px 10px;border:1px solid #d3e2df;border-radius:10px;background:rgba(255,255,255,.94);box-shadow:0 5px 14px rgba(34,80,74,.08);backdrop-filter:blur(8px)}
+.flowmind-map-legend-title{margin-bottom:6px;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;color:#52716a}
+.flowmind-depth-scale,.flowmind-arrival-scale{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:6px;font-size:7px;color:#82938e}
+.flowmind-depth-scale div{height:7px;border-radius:99px;background:linear-gradient(90deg,#e9f7f6,#76d8e8,#1683a6,#07516c)}
+.flowmind-arrival-scale div{height:7px;border-radius:99px;background:linear-gradient(90deg,#b9eee5,#67cfc0,#1683a6,#214e7a)}
+.flowmind-flow-key{display:flex;align-items:center;gap:6px;font-size:8px;font-weight:700;color:#53716a}.flowmind-flow-key span{font-size:16px;color:#1683a6}
+.flowmind-map-svg{transform-origin:center center}
+.flowmind-map-viewport{cursor:grab;touch-action:none}
+.flowmind-map-viewport.is-dragging{cursor:grabbing}
+.flowmind-map-hint{position:absolute;right:12px;bottom:12px;z-index:4;padding:6px 9px;border:1px solid #d3e2df;border-radius:999px;background:rgba(255,255,255,.88);font-size:8px;font-weight:700;color:#7a8d88;box-shadow:0 4px 12px rgba(40,80,75,.06);pointer-events:none}
+
+/* map layer switcher */
+.flowmind-layer-switcher{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.flowmind-layer-group{display:flex;align-items:center;gap:6px}
+.flowmind-layer-label{display:flex;align-items:center;gap:4px;font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#83958f}
+.flowmind-layer-segment,.flowmind-layer-chips{display:flex;align-items:center;gap:3px;padding:3px;border:1px solid #d5e4e1;border-radius:9px;background:#f8fbfa}
+.flowmind-layer-segment button,.flowmind-layer-chips button{height:26px!important;padding:0 8px!important;display:flex;align-items:center;gap:4px;border:0!important;border-radius:6px!important;background:transparent!important;color:#7b8d88!important;font-size:8px!important;font-weight:800!important;letter-spacing:.04em;box-shadow:none!important;transform:none!important}
+.flowmind-layer-segment button:hover,.flowmind-layer-chips button:hover{background:#edf6f4!important;color:#3f716a!important;transform:none!important}
+.flowmind-layer-segment button.is-active,.flowmind-layer-chips button.is-active{background:#e2f4f1!important;color:#167d71!important;box-shadow:inset 0 0 0 1px #b9ddd7!important}
+.flowmind-layer-chips button.is-active svg{color:#1683a6}
+@media(max-width:900px){.flowmind-layer-switcher{justify-content:flex-start}.flowmind-layer-group{flex-wrap:wrap}}
+
+/* decision brief export */
+.flowmind-export-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 11px!important;border:1px solid #cfe1dd!important;background:#fff!important;color:#315b57!important;font-size:10px!important;font-weight:800!important;box-shadow:0 5px 14px rgba(34,80,74,.06)!important}.flowmind-export-btn:hover{background:#eef8f6!important;border-color:#9fc9c2!important;color:#167d71!important}
+
+/* Decision report preview */
+.flowmind-report-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(15,32,38,.48);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px}
+.flowmind-report-modal{width:min(980px,96vw);max-height:92vh;overflow:auto;background:#eef4f3;border:1px solid #cbdedb;border-radius:20px;box-shadow:0 28px 80px rgba(21,50,55,.24)}
+.flowmind-report-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;border-bottom:1px solid #d7e5e2}
+.flowmind-report-kicker{margin:0 0 5px;font-size:9px;font-weight:800;letter-spacing:.18em;color:#17809c}
+.flowmind-report-toolbar h2{margin:0;color:#17343a;font-size:20px}
+.flowmind-report-toolbar p:last-child{margin:4px 0 0;color:#708388;font-size:11px}
+.flowmind-report-actions{display:flex;align-items:center;gap:8px}
+.flowmind-report-secondary{border:1px solid #c8dcd8;background:white;color:#27535b;border-radius:9px;padding:9px 12px;font-size:11px;font-weight:700;cursor:pointer}
+.flowmind-report-close{width:34px;height:34px;border:0;border-radius:9px;background:#e1ebe9;color:#49666c;font-size:22px;cursor:pointer}
+.flowmind-report-paper{margin:20px;background:#fff;border:1px solid #d8e4e1;border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(31,67,70,.06)}
+.flowmind-report-title-row{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.flowmind-report-title-row span{font-size:9px;letter-spacing:.18em;font-weight:800;color:#819296}
+.flowmind-report-title-row h3{margin:5px 0 0;font-size:22px;color:#18383f}
+.flowmind-report-risk{min-width:130px;padding:12px 15px;border-radius:12px;border:1px solid #ead6d0;background:#fff7f4;display:grid;grid-template-columns:1fr auto;column-gap:12px}
+.flowmind-report-risk small{grid-column:1/-1;font-size:8px;letter-spacing:.16em;color:#8a7773}.flowmind-report-risk strong{font-size:13px;color:#c55347}.flowmind-report-risk b{font-size:15px;color:#273f44}
+.flowmind-report-method{margin:20px 0;padding:11px 13px;border-radius:9px;background:#eef8f7;color:#287a78;font-size:9px;font-weight:800;letter-spacing:.12em;text-align:center}.flowmind-report-method i{font-style:normal;color:#a2b7b7;padding:0 5px}
+.flowmind-report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:22px}.flowmind-report-grid>div{padding:12px;border:1px solid #e0e9e7;border-radius:9px;background:#fbfdfc}.flowmind-report-grid small{display:block;color:#829195;font-size:9px}.flowmind-report-grid strong{display:block;margin-top:4px;color:#193c42;font-size:14px}
+.flowmind-report-columns{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid #e3ebe9;padding-top:18px}.flowmind-report-columns h4{margin:0 0 10px;color:#23464d;font-size:12px}.flowmind-report-zone{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #edf2f1}.flowmind-report-zone b{display:block;font-size:10px;color:#31545a}.flowmind-report-zone small{display:block;margin-top:3px;font-size:9px;color:#879699}.flowmind-report-zone>strong{color:#b26c1d;font-size:11px}.flowmind-report-actions-list{margin:0;padding-left:18px;color:#536b70;font-size:10px;line-height:1.65}.flowmind-report-actions-list li{padding-left:3px;margin-bottom:5px}.flowmind-report-muted{font-size:10px;color:#879699}.flowmind-report-footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #e3ebe9;margin-top:20px;padding-top:12px;color:#9aa8aa;font-size:8px;letter-spacing:.04em}
+@media(max-width:760px){.flowmind-report-grid{grid-template-columns:repeat(2,1fr)}.flowmind-report-columns{grid-template-columns:1fr}.flowmind-report-title-row{flex-direction:column}.flowmind-report-paper{margin:10px;padding:16px}.flowmind-report-toolbar{padding:15px}.flowmind-report-actions .flowmind-report-secondary{display:none}}
+
+/* FLOWMIND Decision Report */
+.flowmind-report-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(15,32,38,.48);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px}
+.flowmind-report-modal{width:min(980px,96vw);max-height:92vh;overflow:auto;background:#eef4f3;border:1px solid #cbdedb;border-radius:20px;box-shadow:0 28px 80px rgba(21,50,55,.24)}
+.flowmind-report-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;border-bottom:1px solid #d7e5e2}.flowmind-report-kicker{margin:0 0 5px;font-size:9px;font-weight:800;letter-spacing:.18em;color:#17809c}.flowmind-report-toolbar h2{margin:0;color:#17343a;font-size:20px}.flowmind-report-toolbar p:last-child{margin:4px 0 0;color:#708388;font-size:11px}.flowmind-report-actions{display:flex;align-items:center;gap:8px}.flowmind-report-secondary,.flowmind-report-close{border:1px solid #c8dcd8;background:white;color:#27535b;border-radius:9px;padding:9px 12px;font-size:11px;font-weight:700;cursor:pointer}.flowmind-report-close{width:34px;height:34px;padding:0;background:#e1ebe9;font-size:22px}.flowmind-report-paper{margin:20px;background:#fff;border:1px solid #d8e4e1;border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(31,67,70,.06)}.flowmind-report-title-row{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.flowmind-report-title-row span{font-size:9px;letter-spacing:.18em;font-weight:800;color:#819296}.flowmind-report-title-row h3{margin:5px 0 0;font-size:22px;color:#18383f}.flowmind-report-risk{min-width:130px;padding:12px 15px;border-radius:12px;border:1px solid #ead6d0;background:#fff7f4;display:grid;grid-template-columns:1fr auto;column-gap:12px}.flowmind-report-risk small{grid-column:1/-1;font-size:8px;letter-spacing:.16em;color:#8a7773}.flowmind-report-risk strong{font-size:13px;color:#c55347}.flowmind-report-risk b{font-size:15px;color:#273f44}.flowmind-report-method{margin:20px 0;padding:11px 13px;border-radius:9px;background:#eef8f7;color:#287a78;font-size:9px;font-weight:800;letter-spacing:.12em;text-align:center}.flowmind-report-method i{font-style:normal;color:#a2b7b7;padding:0 5px}.flowmind-report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:22px}.flowmind-report-grid>div{padding:12px;border:1px solid #e0e9e7;border-radius:9px;background:#fbfdfc}.flowmind-report-grid small{display:block;color:#829195;font-size:9px}.flowmind-report-grid strong{display:block;margin-top:4px;color:#193c42;font-size:14px}.flowmind-report-columns{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid #e3ebe9;padding-top:18px}.flowmind-report-columns h4{margin:0 0 10px;color:#23464d;font-size:12px}.flowmind-report-zone{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #edf2f1}.flowmind-report-zone b{display:block;font-size:10px;color:#31545a}.flowmind-report-zone small{display:block;margin-top:3px;font-size:9px;color:#879699}.flowmind-report-zone>strong{color:#b26c1d;font-size:11px}.flowmind-report-actions-list{margin:0;padding-left:18px;color:#536b70;font-size:10px;line-height:1.65}.flowmind-report-actions-list li{padding-left:3px;margin-bottom:5px}.flowmind-report-muted{font-size:10px;color:#879699}.flowmind-report-footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #e3ebe9;margin-top:20px;padding-top:12px;color:#9aa8aa;font-size:8px;letter-spacing:.04em}@media(max-width:760px){.flowmind-report-grid{grid-template-columns:repeat(2,1fr)}.flowmind-report-columns{grid-template-columns:1fr}.flowmind-report-title-row{flex-direction:column}.flowmind-report-paper{margin:10px;padding:16px}.flowmind-report-toolbar{padding:15px}}
+
+/* Executive assessment */
+.flowmind-executive-summary{border:1px solid rgba(22,131,166,.16);background:linear-gradient(135deg,#fff,#f5fbfa);border-radius:16px;padding:16px 18px;box-shadow:0 8px 24px rgba(24,67,61,.05)}
+.flowmind-executive-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.flowmind-kicker{margin:0 0 3px;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1683a6}
+.flowmind-executive-head h3{margin:0;font-size:14px;font-weight:700;color:#18332f}
+.flowmind-risk-pill{padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.08em}
+.flowmind-risk-pill.critical{background:#fde8e7;color:#c33f3b}.flowmind-risk-pill.high{background:#fff0df;color:#b66a12}.flowmind-risk-pill.moderate{background:#fff7df;color:#9b7418}.flowmind-risk-pill.low{background:#e6f6f1;color:#187968}
+.flowmind-executive-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.flowmind-executive-grid>div{padding:10px 12px;border:1px solid #e1ece9;border-radius:11px;background:#fff}
+.flowmind-executive-grid span{display:block;font-size:9px;color:#7b8e89;margin-bottom:4px}.flowmind-executive-grid strong{font-size:15px;color:#18332f}
+@media(max-width:900px){.flowmind-executive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

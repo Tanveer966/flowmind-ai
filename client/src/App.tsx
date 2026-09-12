@@ -150,7 +150,7 @@ function App() {
 
       const response =
         await fetch(
-          `${import.meta.env.VITE_API_URL}/api/simulations`,
+          "http://localhost:5000/api/simulations",
           {
             method: "POST",
 
@@ -211,7 +211,7 @@ function App() {
 
         const response =
           await fetch(
-            `${import.meta.env.VITE_API_URL}/api/scenarios/compare`
+            "http://localhost:5000/api/scenarios/compare"
           );
 
         const result =
@@ -253,7 +253,9 @@ function App() {
       setHistoryError("");
 
       const response =
-        await fetch(`${import.meta.env.VITE_API_URL}/api/simulations`);
+        await fetch(
+          "http://localhost:5000/api/simulations"
+        );
 
       const result =
         await response.json();
@@ -302,7 +304,7 @@ function App() {
 
       const response =
         await fetch(
-          `${import.meta.env.VITE_API_URL}/api/simulations/${id}`
+          `http://localhost:5000/api/simulations/${id}`
         );
 
       const result =
@@ -1209,7 +1211,6 @@ function App() {
                 onPointerCancel={() => setMapDragOrigin(null)}
                 onPointerLeave={() => setMapDragOrigin(null)}
                 onWheel={(event) => {
-                  event.preventDefault();
                   setMapZoom((z) => {
                     const next = z + (event.deltaY < 0 ? 0.1 : -0.1);
                     return Number(Math.min(1.8, Math.max(1, next)).toFixed(2));

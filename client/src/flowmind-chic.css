@@ -144,3 +144,140 @@
 .flowmind-executive-grid>div{padding:10px 12px;border:1px solid #e1ece9;border-radius:11px;background:#fff}
 .flowmind-executive-grid span{display:block;font-size:9px;color:#7b8e89;margin-bottom:4px}.flowmind-executive-grid strong{font-size:15px;color:#18332f}
 @media(max-width:900px){.flowmind-executive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* =========================================================
+   FLOWMIND — FORECAST + RESPONSIVE GRID FIX
+   ========================================================= */
+.flowmind-chic main{width:100%;min-width:0;max-width:100%;overflow-x:hidden}
+.flowmind-chic main>aside,
+.flowmind-chic main>section{min-width:0;max-width:100%}
+.flowmind-chic main>section{overflow:hidden}
+
+.flowmind-chic .flowmind-forecast{
+  width:100%;
+  min-width:0;
+  padding:18px;
+  border:1px solid #dbe8e5;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(34,80,74,.045);
+}
+.flowmind-chic .flowmind-forecast-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:14px;
+}
+.flowmind-chic .flowmind-section-kicker{
+  margin:0 0 4px;
+  color:#1683a6;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.16em;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+.flowmind-chic .flowmind-forecast-head h3{
+  margin:0;
+  color:#18332f;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:-.025em;
+}
+.flowmind-chic .flowmind-forecast-head>span{
+  color:#8a9b96;
+  font-size:9px;
+  white-space:nowrap;
+}
+.flowmind-chic .flowmind-forecast-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  width:100%;
+}
+.flowmind-chic .flowmind-forecast-card{
+  min-width:0;
+  padding:14px;
+  border:1px solid #e0ebe8;
+  border-radius:13px;
+  background:linear-gradient(180deg,#fbfdfc,#f7fbfa);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.flowmind-chic .flowmind-forecast-card:hover{
+  transform:translateY(-2px);
+  border-color:#bfd9d4;
+  box-shadow:0 8px 18px rgba(34,80,74,.06);
+}
+.flowmind-chic .flowmind-forecast-time{
+  color:#1683a6;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.flowmind-chic .flowmind-forecast-label{
+  margin-top:3px;
+  color:#82938e;
+  font-size:9px;
+}
+.flowmind-chic .flowmind-forecast-main{
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+  margin:13px 0 12px;
+}
+.flowmind-chic .flowmind-forecast-main strong{
+  color:#173b50;
+  font-size:27px;
+  line-height:1;
+  font-weight:800;
+}
+.flowmind-chic .flowmind-forecast-main span{
+  color:#71847f;
+  font-size:9px;
+}
+.flowmind-chic .flowmind-forecast-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding-top:9px;
+  margin-top:9px;
+  border-top:1px solid #e3ecea;
+}
+.flowmind-chic .flowmind-forecast-row span{
+  color:#82938e;
+  font-size:9px;
+}
+.flowmind-chic .flowmind-forecast-row b{
+  color:#24443f;
+  font-size:10px;
+}
+.flowmind-chic .flowmind-forecast-risk{
+  padding:4px 7px;
+  border-radius:999px;
+  font-size:8px!important;
+  font-weight:800!important;
+  letter-spacing:.08em;
+}
+.flowmind-chic .flowmind-forecast-risk.critical{background:#fde8e7;color:#c33f3b}
+.flowmind-chic .flowmind-forecast-risk.high{background:#fff0df;color:#b66a12}
+.flowmind-chic .flowmind-forecast-risk.moderate{background:#fff7df;color:#9b7418}
+.flowmind-chic .flowmind-forecast-risk.low{background:#e6f6f1;color:#187968}
+
+/* Keep the three-column live workspace inside the viewport. */
+.flowmind-chic main.grid{grid-template-columns:minmax(230px,270px) minmax(0,1fr) minmax(270px,310px)}
+.flowmind-chic .flowmind-map-card,
+.flowmind-chic .flowmind-map-viewport{min-width:0;max-width:100%}
+.flowmind-chic .flowmind-map-toolbar{min-width:0;flex-wrap:wrap}
+.flowmind-chic .flowmind-layer-switcher{min-width:0;max-width:100%;overflow-x:auto}
+
+@media(max-width:1100px){
+  .flowmind-chic main.grid{grid-template-columns:220px minmax(0,1fr)}
+  .flowmind-chic main.grid>aside:last-child{grid-column:1/-1}
+}
+@media(max-width:820px){
+  .flowmind-chic .flowmind-forecast-grid{grid-template-columns:1fr}
+  .flowmind-chic .flowmind-forecast-head{align-items:flex-start;flex-direction:column}
+  .flowmind-chic .flowmind-forecast-head>span{white-space:normal}
+}

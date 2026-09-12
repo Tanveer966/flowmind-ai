@@ -1146,8 +1146,11 @@ function App() {
                 <div className="flex items-center gap-2">
                   <MapPinned size={15} className="text-cyan-600" />
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">Geospatial propagation map</p>
-                    <p className="mt-0.5 text-[11px] text-slate-400">Synthetic watershed · 25 elevation cells · live simulation state</p>
+                    <div className="flowmind-map-title-row">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">Geospatial propagation map</p>
+                      <span className="flowmind-prototype-badge">PROTOTYPE · SYNTHETIC DATA</span>
+                    </div>
+                    <p className="mt-0.5 text-[11px] text-slate-400">Study area: Synthetic Lower Watershed · 25 elevation cells · live simulation state</p>
                   </div>
                 </div>
                 <div className="flowmind-layer-switcher">

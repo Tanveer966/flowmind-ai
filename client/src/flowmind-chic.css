@@ -281,3 +281,8 @@
   .flowmind-chic .flowmind-forecast-head{align-items:flex-start;flex-direction:column}
   .flowmind-chic .flowmind-forecast-head>span{white-space:normal}
 }
+
+/* study area identity */
+.flowmind-map-title-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.flowmind-prototype-badge{display:inline-flex;align-items:center;padding:3px 7px;border:1px solid #d7e7e3;border-radius:999px;background:#f4faf8;color:#64817a;font-size:7px;font-weight:800;letter-spacing:.11em;line-height:1.2;white-space:nowrap}
+@media(max-width:700px){.flowmind-map-title-row{gap:6px}.flowmind-prototype-badge{font-size:6.5px}}

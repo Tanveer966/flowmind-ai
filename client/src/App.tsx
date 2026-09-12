@@ -5,7 +5,6 @@ import {
   AlertTriangle,
   Droplets,
   Gauge,
-  Map,
   Pause,
   Play,
   RotateCcw,
@@ -151,7 +150,7 @@ function App() {
 
       const response =
         await fetch(
-          "http://localhost:5000/api/simulations",
+          `${import.meta.env.VITE_API_URL}/api/simulations`,
           {
             method: "POST",
 
@@ -212,7 +211,7 @@ function App() {
 
         const response =
           await fetch(
-            "http://localhost:5000/api/scenarios/compare"
+            `${import.meta.env.VITE_API_URL}/api/scenarios/compare`
           );
 
         const result =
@@ -254,9 +253,7 @@ function App() {
       setHistoryError("");
 
       const response =
-        await fetch(
-          "http://localhost:5000/api/simulations"
-        );
+        await fetch(`${import.meta.env.VITE_API_URL}/api/simulations`);
 
       const result =
         await response.json();
@@ -305,7 +302,7 @@ function App() {
 
       const response =
         await fetch(
-          `http://localhost:5000/api/simulations/${id}`
+          `${import.meta.env.VITE_API_URL}/api/simulations/${id}`
         );
 
       const result =
